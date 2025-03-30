@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxfiy Sayt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🍏 Oilaviy Sayt</div>
+        <ul class="nav-links">
+            <li><a href="#">Bosh sahifa</a></li>
+            <li><a href="#">Rasmlar</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">Hisob-kitob</a></li>
+        </ul>
+    </nav>
+
+    <!-- Asosiy banner -->
+    <header class="hero">
+        <h1>Oilamiz uchun maxfiy sayt</h1>
+        <p>Foydalanuvchilar uchun xavfsiz va maxfiy platforma</p>
+        <a href="#" class="btn">Boshlash</a>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Oilaviy Sayt. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
+/* Umumiy uslub */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+/* Asosiy banner */
+.hero {
+    padding: 120px 20px;
+    background: url('https://www.apple.com/v/home/ai/images/meta/og__e5qk9xpx2eqe.png') center/cover no-repeat;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0071e3;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #005bb5;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Tizimga kirish</h2>
+        <input type="email" id="email" placeholder="Emailingizni kiriting">
+        <input type="password" id="password" placeholder="Parol">
+        <button onclick="login()">Kirish</button>
+        <p>Hisobingiz yo‘qmi? <a href="register.html">Ro‘yxatdan o‘tish</a></p>
+        <p id="login-error" style="color: red;"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro‘yxatdan o‘tish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Ro‘yxatdan o‘tish</h2>
+        <input type="email" id="reg-email" placeholder="Emailingiz">
+        <input type="password" id="reg-password" placeholder="Parol">
+        <button onclick="register()">Ro‘yxatdan o‘tish</button>
+        <p id="register-message" style="color: green;"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media yuklash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="media-container">
+        <h2>Rasmlar, videolar va qo‘shiqlar yuklash</h2>
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Yuklash</button>
+        
+        <h3>Yuklangan fayllar:</h3>
+        <div id="fileList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oilaviy Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <h2>Oilaviy Chat</h2>
+        <div id="chat-box"></div>
+        
+        <input type="text" id="messageInput" placeholder="Xabar yozing...">
+        <button onclick="sendMessage()">Yuborish</button>
+        <button onclick="clearChat()">Tozalash</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+function sendMessage() {
+    let messageInput = document.getElementById("messageInput");
+    let message = messageInput.value.trim();
+
+    if (message) {
+        let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+        messages.push(message);
+        localStorage.setItem("chatMessages", JSON.stringify(messages));
+        messageInput.value = "";
+        showMessages();
+    }
+}
+
+// Xabarlarni ko‘rsatish
+function showMessages() {
+    let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+    let chatBox = document.getElementById("chat-box");
+    chatBox.innerHTML = "";
+
+    messages.forEach((msg, index) => {
+        let messageElement = document.createElement("div");
+        messageElement.innerHTML = 
+            <p>${msg} <button onclick="deleteMessage(${index})">🗑</button></p>
+        ;
+        chatBox.appendChild(messageElement);
+    });
+}
+
+// Xabarni o‘chirish
+function deleteMessage(index) {
+    let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+    messages.splice(index, 1);
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+    showMessages();
+}
+
+// Chatni tozalash
+function clearChat() {
+    localStorage.removeItem("chatMessages");
+    showMessages();
+}
+
+// Sahifa yuklanganda chatni ko‘rsatish
+window.onload = function() {
+    showMessages();
+};
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byudjet Hisobi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="budget-container">
+        <h2>Oilaviy Byudjet</h2>
+        <h3>Joriy balans: <span id="balance">0</span> so‘m</h3>
+
+        <input type="number" id="amount" placeholder="Summani kiriting">
+        <select id="type">
+            <option value="kirim">Kirim</option>
+            <option value="chiqim">Chiqim</option>
+        </select>
+        <button onclick="addTransaction()">Qo‘shish</button>
+        
+        <h3>Tranzaksiyalar:</h3>
+        <div id="transactions"></div>
+        
+        <button onclick="clearTransactions()">Tozalash</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+function addTransaction() {
+    let amount = parseFloat(document.getElementById("amount").value);
+    let type = document.getElementById("type").value;
+
+    if (!isNaN(amount) && amount > 0) {
+        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+        transactions.push({ amount, type });
+        localStorage.setItem("transactions", JSON.stringify(transactions));
+        updateBalance();
+        showTransactions();
+        document.getElementById("amount").value = "";
+    } else {
+        alert("Iltimos, to‘g‘ri summa kiriting!");
+    }
+}
+
+// Balansni yangilash
+function updateBalance() {
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    let balance = transactions.reduce((acc, t) => t.type === "kirim" ? acc + t.amount : acc - t.amount, 0);
+    document.getElementById("balance").innerText = balance.toLocaleString() + " so‘m";
+}
+
+// Tranzaksiyalarni chiqarish
+function showTransactions() {
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    let transactionList = document.getElementById("transactions");
+    transactionList.innerHTML = "";
+
+    transactions.forEach((t, index) => {
+        let transactionElement = document.createElement("div");
+        transactionElement.innerHTML = 
+            <p>${t.type === "kirim" ? "➕" : "➖"} ${t.amount.toLocaleString()} so‘m 
+            <button onclick="deleteTransaction(${index})">🗑</button></p>
+        ;
+        transactionList.appendChild(transactionElement);
+    });
+
+    updateBalance();
+}
+
+// Tranzaksiyani o‘chirish
+function deleteTransaction(index) {
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    transactions.splice(index, 1);
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+    showTransactions();
+}
+
+// Tranzaksiyalarni tozalash
+function clearTransactions() {
+    localStorage.removeItem("transactions");
+    showTransactions();
+}
+
+// Sahifa yuklanganida tranzaksiyalarni chiqarish
+window.onload = function() {
+    showTransactions();
+};
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Yordamchi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ai-container">
+        <h2>AI Yordamchi</h2>
+        <input type="text" id="aiQuestion" placeholder="Savolingizni yozing...">
+        <button onclick="askAI()">Yuborish</button>
+        <div id="aiResponse"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+async function askAI() {
+    let question = document.getElementById("aiQuestion").value;
+
+    if (!question.trim()) {
+        alert("Iltimos, savol kiriting!");
+        return;
+    }
+
+    let responseElement = document.getElementById("aiResponse");
+    responseElement.innerHTML = "⏳ AI javob bermoqda...";
+
+    try {
+        let response = await fetch("https://api.openai.com/v1/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer YOUR_OPENAI_API_KEY" // API kalitingizni kiriting
+            },
+            body: JSON.stringify({
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "user", content: question }],
+                max_tokens: 100
+            })
+        });
+
+        let data = await response.json();
+        responseElement.innerHTML = data.choices[0].message.content;
+    } catch (error) {
+        responseElement.innerHTML = "❌ Xatolik yuz berdi!";
+    }
+}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Yordamchi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ai-container">
+        <h2>AI Yordamchi</h2>
+        <input type="text" id="aiQuestion" placeholder="Savolingizni yozing...">
+        <button onclick="askAI()">Yuborish</button>
+        <div id="aiResponse"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+async function askAI() {
+    let question = document.getElementById("aiQuestion").value;
+
+    if (!question.trim()) {
+        alert("Iltimos, savol kiriting!");
+        return;
+    }
+
+    let responseElement = document.getElementById("aiResponse");
+    responseElement.innerHTML = "⏳ AI javob bermoqda...";
+
+    try {
+        let response = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer YOUR_OPENAI_API_KEY" // API kalitini shu joyga qo‘ying
+            },
+            body: JSON.stringify({
+                model: "gpt-4-turbo",
+                messages: [{ role: "user", content: question }],
+                max_tokens: 100
+            })
+        });
+
+        let data = await response.json();
+        responseElement.innerHTML = data.choices[0].message.content;
+    } catch (error) {
+        responseElement.innerHTML = "❌ Xatolik yuz berdi!";
+    }
+}
+function askAI() {
+    let question = document.getElementById("aiQuestion").value.toLowerCase();
+    let responseElement = document.getElementById("aiResponse");
+
+    let responses = {
+        "salom": "Salom! Qanday yordam bera olaman?",
+        "byudjet bo‘yicha maslahat bering": "Oylik byudjetingizni rejalashtirish uchun avvalo xarajatlaringizni yozib chiqing.",
+        "chatbot qanday ishlaydi?": "Men AI yordamchi chatbotman! Savollaringizga javob bera olaman.",
+        "xayr": "Xayr! Yana kutib qolaman."
+    };
+
+    responseElement.innerHTML = responses[question] || "Kechirasiz, bu savolga hali tayyor javobim yo‘q.";
+/* Umumiy stil */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7;
+    color: #333;
+    text-align: center;
+}
+
+/* Navbar (yuqori menyu) */
+.navbar {
+    background-color: #fff;
+    padding: 15px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #0071e3;
+}
+
+/* Asosiy qism */
+.hero {
+    background: url('https://www.apple.com/v/home/bh/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_largetall.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero button {
+    background-color: #0071e3;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #005bb5;
+}
+
+/* Karta dizayni */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Pastki qism (footer) */
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Uslubidagi Sayt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Bosh sahifa</a>
+        <a href="#">Mahsulotlar</a>
+        <a href="#">AI Yordamchi</a>
+        <a href="#">Aloqa</a>
+    </div>
+
+    <!-- Hero (Asosiy banner) -->
+    <div class="hero">
+        <h1>Apple Uslubidagi Sayt</h1>
+        <p>Eng zamonaviy va minimalistik dizayn!</p>
+        <button onclick="location.href='#'">Ko‘proq bilish</button>
+    </div>
+
+    <!-- Karta bo‘limi -->
+    <div class="card-container">
+        <div class="card">
+            <img src="https://www.apple.com/v/iphone-15-pro/a/images/overview/hero/hero_static__e9lv4ca1nfou_large.jpg" alt="iPhone">
+            <h3>iPhone 15 Pro</h3>
+            <p>Eng kuchli Pro modeli.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.apple.com/v/apple-watch-ultra-2/a/images/overview/hero__b6uogv8kkm7y_large.jpg" alt="Apple Watch">
+            <h3>Apple Watch Ultra 2</h3>
+            <p>Ekstremal sportchilarga mos.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.apple.com/v/macbook-air-15/a/images/overview/hero__gnfp9t9g6w2q_large.jpg" alt="MacBook Air">
+            <h3>MacBook Air 15</h3>
+            <p>Ultra yupqa va tezkor noutbuk.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Maxfiy Sayt. Barcha huquqlar himoyalangan.</p>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>Admin Panel</h2>
+        
+        <label for="heroTitle">Sarlavhani o‘zgartirish:</label>
+        <input type="text" id="heroTitle" placeholder="Yangi sarlavha">
+
+        <label for="heroText">Matnni o‘zgartirish:</label>
+        <input type="text" id="heroText" placeholder="Yangi matn">
+
+        <label for="heroImage">Rasm URL (fon rasmi):</label>
+        <input type="text" id="heroImage" placeholder="Rasm manzili">
+
+        <button onclick="saveChanges()">O‘zgarishlarni saqlash</button>
+        
+        <p id="status"></p>
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f7;
+    text-align: center;
+}
+
+.admin-container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0071e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005bb5;
+}
+function saveChanges() {
+    let newTitle = document.getElementById("heroTitle").value;
+    let newText = document.getElementById("heroText").value;
+    let newImage = document.getElementById("heroImage").value;
+
+    if (newTitle) localStorage.setItem("heroTitle", newTitle);
+    if (newText) localStorage.setItem("heroText", newText);
+    if (newImage) localStorage.setItem("heroImage", newImage);
+
+    document.getElementById("status").innerText = "O‘zgarishlar saqlandi!";
+}
+document.addEventListener("DOMContentLoaded", function () {
+    let savedTitle = localStorage.getItem("heroTitle");
+    let savedText = localStorage.getItem("heroText");
+    let savedImage = localStorage.getItem("heroImage");
+
+    if (savedTitle) document.querySelector(".hero h1").innerText = savedTitle;
+    if (savedText) document.querySelector(".hero p").innerText = savedText;
+    if (savedImage) document.querySelector(".hero").style.backgroundImage = url(${savedImage});
+});
+<div id="login">
+    <h2>Admin Panel</h2>
+    <input type="password" id="adminPass" placeholder="Parol">
+    <button onclick="checkAdmin()">Kirish</button>
+</div>
+
+<div id="adminPanel" style="display:none;">
+    <h2>Saytni boshqarish</h2>
+    <label for="heroTitle">Sarlavhani o‘zgartirish:</label>
+    <input type="text" id="heroTitle" placeholder="Yangi sarlavha">
+    
+    <label for="heroText">Matnni o‘zgartirish:</label>
+    <input type="text" id="heroText" placeholder="Yangi matn">
+    
+    <label for="heroImage">Rasm URL:</label>
+    <input type="text" id="heroImage" placeholder="Rasm manzili">
+    
+    <button onclick="saveChanges()">Saqlash</button>
+</div>
+
+<script>
+function checkAdmin() {
+    let pass = document.getElementById("adminPass").value;
+    if (pass === "Admin123") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+    } else {
+        alert("Noto‘g‘ri parol!");
+    }
+}
+</script>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yangiliklar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="news.html">Yangiliklar</a>
+        <a href="blog.html">Blog</a>
+        <a href="admin.html">Admin</a>
+    </div>
+
+    <div class="container">
+        <h1>So‘nggi Yangiliklar</h1>
+        <div id="news-list"></div>
+        
+        <h2>Yangilik qo‘shish</h2>
+        <input type="text" id="news-title" placeholder="Sarlavha">
+        <textarea id="news-content" placeholder="Yangilik matni"></textarea>
+        <button onclick="addNews()">Qo‘shish</button>
+    </div>
+
+    <script src="news.js"></script>
+
+</body>
+</html>
+document.addEventListener("DOMContentLoaded", loadNews);
+
+function loadNews() {
+    let newsData = JSON.parse(localStorage.getItem("news")) || [];
+    let newsList = document.getElementById("news-list");
+    newsList.innerHTML = "";
+
+    newsData.forEach((news, index) => {
+        let div = document.createElement("div");
+        div.classList.add("news-item");
+        div.innerHTML = <h3>${news.title}</h3><p>${news.content}</p>
+                         <button onclick="deleteNews(${index})">O‘chirish</button>;
+        newsList.appendChild(div);
+    });
+}
+
+function addNews() {
+    let title = document.getElementById("news-title").value;
+    let content = document.getElementById("news-content").value;
+
+    if (title && content) {
+        let newsData = JSON.parse(localStorage.getItem("news")) || [];
+        newsData.push({ title, content });
+        localStorage.setItem("news", JSON.stringify(newsData));
+
+        loadNews();
+    }
+}
+
+function deleteNews(index) {
+    let newsData = JSON.parse(localStorage.getItem("news")) || [];
+    newsData.splice(index, 1);
+    localStorage.setItem("news", JSON.stringify(newsData));
+    loadNews();
+}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="news.html">Yangiliklar</a>
+        <a href="blog.html">Blog</a>
+        <a href="admin.html">Admin</a>
+    </div>
+
+    <div class="container">
+        <h1>Blog Maqolalari</h1>
+        <div id="blog-list"></div>
+
+        <h2>Yangi Maqola Qo‘shish</h2>
+        <input type="text" id="blog-title" placeholder="Sarlavha">
+        <textarea id="blog-content" placeholder="Maqola matni"></textarea>
+        <button onclick="addBlog()">Qo‘shish</button>
+    </div>
+
+    <script src="blog.js"></script>
+
+</body>
+</html>
+document.addEventListener("DOMContentLoaded", loadBlog);
+
+function loadBlog() {
+    let blogData = JSON.parse(localStorage.getItem("blog")) || [];
+    let blogList = document.getElementById("blog-list");
+    blogList.innerHTML = "";
+
+    blogData.forEach((blog, index) => {
+        let div = document.createElement("div");
+        div.classList.add("blog-item");
+        div.innerHTML = <h3>${blog.title}</h3><p>${blog.content}</p>
+                         <button onclick="deleteBlog(${index})">O‘chirish</button>;
+        blogList.appendChild(div);
+    });
+}
+
+function addBlog() {
+    let title = document.getElementById("blog-title").value;
+    let content = document.getElementById("blog-content").value;
+
+    if (title && content) {
+        let blogData = JSON.parse(localStorage.getItem("blog")) || [];
+        blogData.push({ title, content });
+        localStorage.setItem("blog", JSON.stringify(blogData));
+
+        loadBlog();
+    }
+}
+
+function deleteBlog(index) {
+    let blogData = JSON.parse(localStorage.getItem("blog")) || [];
+    blogData.splice(index, 1);
+    localStorage.setItem("blog", JSON.stringify(blogData));
+    loadBlog();
+}
+<h2>Yangiliklarni o‘chirish</h2>
+<button onclick="clearNews()">Barcha yangiliklarni o‘chirish</button>
+
+<h2>Bloglarni o‘chirish</h2>
+<button onclick="clearBlog()">Barcha bloglarni o‘chirish</button>
+
+<script>
+function clearNews() {
+    localStorage.removeItem("news");
+    alert("Barcha yangiliklar o‘chirildi!");
+}
+
+function clearBlog() {
+    localStorage.removeItem("blog");
+    alert("Barcha bloglar o‘chirildi!");
+}
+</script>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foydalanuvchilarni boshqarish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="admin.html">Admin Panel</a>
+        <a href="admin_users.html">Foydalanuvchilar</a>
+        <a href="admin_news.html">Yangiliklar</a>
+    </div>
+
+    <div class="container">
+        <h1>Foydalanuvchilar</h1>
+        <ul id="user-list"></ul>
+
+        <h2>Yangi foydalanuvchi qo‘shish</h2>
+        <input type="text" id="new-username" placeholder="Foydalanuvchi nomi">
+        <button onclick="addUser()">Qo‘shish</button>
+    </div>
+
+    <script src="admin_users.js"></script>
+
+</body>
+</html>
+document.addEventListener("DOMContentLoaded", loadUsers);
+
+function loadUsers() {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let userList = document.getElementById("user-list");
+    userList.innerHTML = "";
+
+    users.forEach((user, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = ${user} <button onclick="deleteUser(${index})">O‘chirish</button>;
+        userList.appendChild(li);
+    });
+}
+
+function addUser() {
+    let username = document.getElementById("new-username").value;
+    if (username) {
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(username);
+        localStorage.setItem("users", JSON.stringify(users));
+        loadUsers();
+    }
+}
+
+function deleteUser(index) {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    users.splice(index, 1);
+    localStorage.setItem("users", JSON.stringify(users));
+    loadUsers();
+}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayt dizaynini o‘zgartirish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="admin.html">Admin Panel</a>
+        <a href="admin_design.html">Dizayn</a>
+    </div>
+
+    <div class="container">
+        <h1>Sayt dizaynini o‘zgartirish</h1>
+        <label for="bg-color">Fon rangi:</label>
+        <input type="color" id="bg-color">
+        <button onclick="changeDesign()">O‘zgartirish</button>
+    </div>
+
+    <script>
+        function changeDesign() {
+            let color = document.getElementById("bg-color").value;
+            document.body.style.backgroundColor = color;
+            localStorage.setItem("bgColor", color);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let savedColor = localStorage.getItem("bgColor");
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+            }
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatni boshqarish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="admin.html">Admin Panel</a>
+        <a href="admin_chat.html">Chat</a>
+    </div>
+
+    <div class="container">
+        <h1>Chat xabarlarini boshqarish</h1>
+        <ul id="chat-list"></ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", loadChat);
+
+        function loadChat() {
+            let messages = JSON.parse(localStorage.getItem("chat")) || [];
+            let chatList = document.getElementById("chat-list");
+            chatList.innerHTML = "";
+
+            messages.forEach((msg, index) => {
+                let li = document.createElement("li");
+                li.innerHTML = ${msg} <button onclick="deleteMessage(${index})">O‘chirish</button>;
+                chatList.appendChild(li);
+            });
+        }
+
+        function deleteMessage(index) {
+            let messages = JSON.parse(localStorage.getItem("chat")) || [];
+            messages.splice(index, 1);
+            localStorage.setItem("chat", JSON.stringify(messages));
+            loadChat();
+        }
+    </script>
+
+</body>
+</html>
+<h1>Tasdiqlanmagan maqolalar</h1>
+<ul id="pending-posts"></ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", loadPendingPosts);
+
+function loadPendingPosts() {
+    let posts = JSON.parse(localStorage.getItem("pendingPosts")) || [];
+    let postList = document.getElementById("pending-posts");
+    postList.innerHTML = "";
+
+    posts.forEach((post, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = <h3>${post.title}</h3><p>${post.content}</p>
+                        <button onclick="approvePost(${index})">Tasdiqlash</button>
+                        <button onclick="deletePost(${index})">O‘chirish</button>;
+        postList.appendChild(li);
+    });
+}
+
+function approvePost(index) {
+    let posts = JSON.parse(localStorage.getItem("pendingPosts")) || [];
+    let approvedPosts = JSON.parse(localStorage.getItem("blog")) || [];
+    approvedPosts.push(posts[index]);
+    localStorage.setItem("blog", JSON.stringify(approvedPosts));
+
+    posts.splice(index, 1);
+    localStorage.setItem("pendingPosts", JSON.stringify(posts));
+    loadPendingPosts();
+}
+
+function deletePost(index) {
+    let posts = JSON.parse(localStorage.getItem("pendingPosts")) || [];
+    posts.splice(index, 1);
+    localStorage.setItem("pendingPosts", JSON.stringify(posts));
+    loadPendingPosts();
+}
+</script>
+const express = require("express");
+const cors = require("cors");
+const axios = require("axios");
+require("dotenv").config();
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+app.post("/chat", async (req, res) => {
+    try {
+        const userMessage = req.body.message;
+
+        const response = await axios.post(
+            "https://api.openai.com/v1/chat/completions",
+            {
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "user", content: userMessage }]
+            },
+            {
+                headers: {
+                    "Authorization": Bearer ${OPENAI_API_KEY},
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+
+        res.json({ reply: response.data.choices[0].message.content });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Serverda xatolik yuz berdi");
+    }
+});
+
+app.listen(5000, () => console.log("Server 5000-portda ishlamoqda"));
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Chatbot</h1>
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Savolingizni yozing...">
+        <button onclick="sendMessage()">Yuborish</button>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            let userMessage = document.getElementById("user-input").value;
+            if (!userMessage) return;
+
+            let chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += <p><b>Siz:</b> ${userMessage}</p>;
+
+            const response = await fetch("http://localhost:5000/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userMessage })
+            });
+
+            const data = await response.json();
+            chatBox.innerHTML += <p><b>AI:</b> ${data.reply}</p>;
+        }
+    </script>  
